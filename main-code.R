@@ -34,7 +34,7 @@ y2[which.max(y1)]<-max(y1)
 y2[which.second.max(y1)]<-y1[which.second.max(y1)]
 y<-y2/sum(y2)
 return(y)}
-
+ 
 wdesign<-function(P.tox,P.eff,target.tox,target.eff,n,cohort,allocation="one.best",rand.proportion=NULL,missing.efficacy=F,beta.prior,alpha.prior,
                   Pr.tox=NULL,Pr.eff=NULL,initial.prior.value.eff=target.eff,initial.prior.value.tox=target.tox,step.eff=NULL,step.tox=NULL,
                   beta.tox=1,beta.eff=1,kappa=0.5,nsims,safety.constraint=FALSE,toxicity.monotonicity=TRUE,exceptions.list=NULL,rate.tox=NULL,
