@@ -2,8 +2,8 @@ library("mvtnorm")
 
 
 logit<-function(x,alpha.transform=-4.6,beta.transform=-1.5){
-  a<-(-1)*beta.tranform
-  b<-alpha.tranform
+  a<-(-1)*beta.transform
+  b<-alpha.transform
   y<-exp(-a*x+b)/(1+exp(-a*x+b))
   return(y)
 }
@@ -16,7 +16,7 @@ loss<-function(p.tox,x.eff,target.tox,target.eff){
   theta1<-target.eff*(1-target.tox)
   theta2<-(1-target.eff)*(1-target.tox)
   theta3<-1-theta1-theta2
-  y<-(theta1^2/alpha1)^a1+(theta2^2/alpha2)^a2+(theta3^2/alpha3)^(3-a1-a2)-1
+  y<-(theta1^2/alpha1)+(theta2^2/alpha2)+(theta3^2/alpha3)-1
   return(y)}
 
 
